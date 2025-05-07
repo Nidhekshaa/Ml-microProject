@@ -1,0 +1,120 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #eaeaea;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #333;
+}
+
+/* Form container styles */
+.form-container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 420px;
+  max-width: 100%;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #5c6bc0;
+  font-weight: bold;
+}
+
+/* Form styling */
+.heart-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.input-field {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #5c6bc0;
+  box-shadow: 0 0 8px rgba(92, 107, 192, 0.4);
+}
+
+.submit-btn {
+  padding: 14px;
+  background-color: #5c6bc0;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #3f51b5;
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.submit-btn:active {
+  transform: translateY(1px); /* Slight depression effect when clicked */
+}
+
+/* Result Text */
+.result {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.result.success {
+  color: #388e3c;
+}
+
+.result.error {
+  color: #d32f2f;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .form-container {
+    width: 90%;
+    padding: 30px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+  }
+}
