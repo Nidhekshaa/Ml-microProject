@@ -1,120 +1,128 @@
-/* Global Styles */
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #eaeaea;
-  margin: 0;
-  padding: 0;
+/* heartForm.css */
+form {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  color: #333;
-}
-
-/* Form container styles */
-.form-container {
-  background-color: white;
-  padding: 40px;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 450px;
+  margin: 30px auto;
+  padding: 30px;
+  border: 1px solid #ddd;
   border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  width: 420px;
-  max-width: 100%;
-  margin-bottom: 20px;
-  transition: transform 0.3s ease-in-out;
+  background-color: #f0f8ff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-  text-align: center;
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #5c6bc0;
-  font-weight: bold;
-}
-
-/* Form styling */
-.heart-form {
+form div {
   display: flex;
   flex-direction: column;
-  gap: 18px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
 }
 
 label {
-  font-weight: bold;
-  font-size: 14px;
-  color: #555;
-  transition: color 0.3s ease;
-}
-
-.input-field {
-  padding: 12px;
   font-size: 16px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  box-sizing: border-box;
-  transition: border 0.3s ease;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
 }
 
-.input-field:focus {
+input[type="number"],
+select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
   outline: none;
-  border-color: #5c6bc0;
-  box-shadow: 0 0 8px rgba(92, 107, 192, 0.4);
+  transition: border-color 0.3s ease;
 }
 
-.submit-btn {
-  padding: 14px;
-  background-color: #5c6bc0;
+input[type="number"]:focus,
+select:focus {
+  border-color: #4CAF50;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;  /* For Firefox */
+  appearance: textfield;       /* For Chrome, Safari, and Edge */
+}
+
+select {
+  background-color: #ffffff;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+select option {
+  background-color: #f0f8ff;
+  color: #000;
+}
+
+select:focus option:checked {
+  background-color: #4c72af;
+  color: white;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 18px;
+  background-color: #4CAF50;
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease;
 }
 
-.submit-btn:hover {
-  background-color: #3f51b5;
-  transform: translateY(-2px); /* Slight lift effect on hover */
+button:hover {
+  background-color: #45a049;
 }
 
-.submit-btn:active {
-  transform: translateY(1px); /* Slight depression effect when clicked */
+button:active {
+  background-color: #388e3c;
 }
 
-/* Result Text */
-.result {
-  margin-top: 15px;
-  text-align: center;
-  font-weight: bold;
+p {
   font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
 }
 
-.result.success {
-  color: #388e3c;
+.chart-container {
+  width: 80%;
+  max-width: 400px;
+  margin: 30px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.result.error {
-  color: #d32f2f;
+.chart-container canvas {
+  width: 100%;
+  height: auto;
 }
 
-/* Responsive Design */
-@media (max-width: 480px) {
-  .form-container {
-    width: 90%;
-    padding: 30px;
+@media (max-width: 500px) {
+  form {
+    padding: 20px;
   }
 
-  h2 {
-    font-size: 24px;
+  label {
+    font-size: 14px;
   }
 
-  .submit-btn {
+  input[type="number"],
+  select {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+
+  p {
     font-size: 14px;
   }
 }
